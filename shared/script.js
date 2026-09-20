@@ -17,7 +17,7 @@ function aplicarConfiguracaoUnidade() {
   if (rodape) rodape.textContent = "Sistema interno de solicitação de permutas " + versao + " • " + nomeUnidade;
   if (brasao) {
     brasao.src = CONFIGURACAO.brasao || "brasao.png";
-    brasao.alt = "Brasão do " + nomeUnidade;
+    brasao.alt = CONFIGURACAO.brasaoAlt || ("Brasão do " + nomeUnidade);
   }
   if (tituloApple) tituloApple.setAttribute("content", CONFIGURACAO.nomeCurto || ("Permutas " + nomeUnidade));
 }
