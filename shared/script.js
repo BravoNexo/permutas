@@ -536,7 +536,7 @@ function exibirHistoricoPermutas(permutas) {
     const motivoHtml = motivoCancelamento
       ? `
         <div class="motivo-cancelamento-historico">
-          <span class="rotulo">Motivo do cancelamento:</span>
+          <span class="rotulo">${classeStatus === "status-cancelada" ? "Motivo do cancelamento:" : "Observação da decisão:"}</span>
           ${escaparHtml(motivoCancelamento)}
         </div>
       `
