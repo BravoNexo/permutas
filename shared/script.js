@@ -53,6 +53,13 @@ aplicarConfiguracaoUnidade();
 carregarMilitares();
 
 async function chamarApi(acao, dados = {}) {
+  // BNX_PERMUTAS_SQL_TRANSPORT_V1
+  if (CONFIGURACAO.sqlEnabled === true) {
+    if (!window.BNXPermutasSql || typeof window.BNXPermutasSql.invoke !== "function") {
+      throw new Error("A conexão atualizada de Permutas ainda não está disponível. Atualize a página.");
+    }
+    return window.BNXPermutasSql.invoke(acao, dados);
+  }
   if (!URL_API) {
     throw new Error("Configuração da unidade não encontrada.");
   }

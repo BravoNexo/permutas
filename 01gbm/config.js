@@ -6,5 +6,7 @@ window.BRAVONEXO_CONFIG = Object.freeze({
   versao: "v3.68",
   brasao: "icons/permutas-cbmerj-192-v2.png",
   brasaoAlt: "Brasão do Sistema de Permutas — 1º GBM",
-  apiUrl: "https://script.google.com/macros/s/AKfycbxknTIwCNprGaNG0v6hXGsliYGjvjC3lnm2QJz2F3cELkXHl3Z2xkqVgRcfJofCOS8Otg/exec"
+  sqlEnabled: true,
+  sqlApiUrl: "https://ciqctdckqmopdeoigzfz.supabase.co/functions/v1/permutas-public",
+  apiUrl: "https://ciqctdckqmopdeoigzfz.supabase.co/functions/v1/permutas-public"
 });
